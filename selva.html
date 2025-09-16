@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas Típicas del Perú - Selva</title>
+    <link rel="stylesheet" href="selva.css">
+</head>
+<body>
+
+    <h1>Danzas Típicas del Perú - Región Selva</h1>
+    <p>Las danzas típicas de la región Selva del Perú reflejan la riqueza natural y cultural de la Amazonía. Estas expresiones artísticas combinan tradiciones ancestrales indígenas con influencias mestizas, celebrando la conexión profunda con la selva, la fauna, y los rituales espirituales que forman parte de la identidad de las comunidades amazónicas.</p>
+    <ul>
+        <h2>1.Pandilla Amazónica</h2>
+        <li>Danza grupal y festiva de San Juan.</li>
+        <li>Alegre y llena de energía, celebra la unión y la identidad comunitaria de la Amazonía.</li>
+        <br>
+        <h2>2.Tiririky</h2>
+        <li>Danza de los pueblos shipibo-conibo.</li>
+        <li>Imita movimientos de animales.</li>
+        <li>Refleja la conexión con la naturaleza y el mundo espiritual.</li>
+        <br>
+        <h2>3.Anaconda</h2>
+        <li>Representa la serpiente sagrada de la Amazonía.</li>
+        <li>Danza ceremonial y respetuosa con los elementos naturales.</li>
+        <li>Transmite un mensaje espiritual profundo.</li>
+        <br>
+        <h2>4.Danza del Maíz</h2>
+        <li>Ceremonial en honor al alimento sagrado.</li>
+        <li>Danza ceremonial y respetuosa con los elementos naturales.</li>
+        <li>Es una danza de gratitud y celebración.</li>
+        <br>
+        <h2>5.Danza del Pijuayo</h2>
+        <li>Celebración en torno a este fruto típico de la selva.</li>
+        <li>Expresa alegría y gratitud por la cosecha.</li>
+        <li>Se realiza en festividades comunitarias.</li>
+        <br>
+        <h2>6.Danza del Curi</h2>
+        <li>De origen ceremonial y relacionada con el oro ("curi").</li>
+        <li>Simboliza riqueza y espiritualidad ancestral.</li>
+        <li>Muy importante en rituales tradicionales.</li>
+        <br>
+        <h2>7.Danza del Ayahuasca</h2>
+        <li>Asociada a rituales chamánicos.</li>
+        <li>Invoca la conexión con el mundo espiritual y la sanación.</li>
+        <li>Danza profunda y simbólica.</li>
+        <br>
+        <h2>8.Changanacuy</h2>
+        <li>Danza de encuentro entre comunidades.</li>
+        <li>Promueve la armonía, el intercambio cultural y la cooperación.</li>
+        <li>Fomenta la unidad entre pueblos.</li>
+        <br>
+        <h2>9.Danza de los Cazadores</h2>
+        <li>Recrea escenas de caza tradicional.</li>
+        <li>Muestra habilidad y respeto hacia la naturaleza.</li>
+        <li>Es parte de la enseñanza cultural.</li>
+        <br>
+        <h2>10.Danza de la Yuca</h2>
+        <li>Relacionada con la cosecha de este tubérculo esencial.</li>
+        <li>Expresa gratitud y celebración.</li>
+        <li>Destaca la importancia de la yuca en la alimentación local.</li>
+    </ul>
+
+    <div class="slideshow">
+        <img id="imagen" src="" alt="Danza típica de la costa peruana">
+    </div>
+
+    <script>
+        // Lista de rutas a las imágenes
+        const imagenes = [
+            "sierra/danza1.jpg",
+           "sierra/danza2.jpg",
+           "sierra/danza3.jpg",
+           "sierra/danza4.jpg",
+           "sierra/danza5.jpg",
+           "sierra/danza6.jpg",
+           "sierra/danza7.jpg",
+           "sierra/danza8.jpg",
+           "sierra/danza9.jpg",
+           "sierra/danza10.jpg"
+
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        // Iniciar slideshow
+        mostrarSiguienteFoto();
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+
+    <footer>
+        @Dante Rodriguez tralalero tralala
+    </footer>
+
+</body>
+</html>

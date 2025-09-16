@@ -1,0 +1,113 @@
+/* sierra.css */
+
+body {
+    background: linear-gradient(135deg, #f4e2d8, #d3b8ae); /* Tonos tierra suaves */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #5b3a29; /* Marrón oscuro para el texto */
+    margin: 0;
+    padding: 20px 40px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #a94f32; /* Terracota */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #6e4a38; /* Marrón medio */
+    font-weight: 500;
+}
+
+ul {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding-left: 0;
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #bb6a48; /* Terracota claro */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #bb6a48;
+    padding-bottom: 6px;
+}
+
+li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    position: relative;
+    line-height: 1.5;
+}
+
+li::before {
+    content: "•";
+    color: #bb6a48;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+    top: 0;
+}
+
+.slideshow {
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #bb6a48;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -3px 10px rgba(187, 106, 72, 0.6);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    .slideshow {
+        max-width: 100%;
+    }
+}

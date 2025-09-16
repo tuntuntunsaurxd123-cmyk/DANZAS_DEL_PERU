@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas Típicas del Perú - Sierra</title>
+    <link rel="stylesheet" href="sierra.css">
+</head>
+<body>
+
+    <h1>Danzas Típicas del Perú - Región Sierra</h1>
+    <p>Las danzas típicas de la región Sierra del Perú reflejan la diversidad cultural y la profunda conexión con la naturaleza y la espiritualidad andina. Estas danzas combinan tradiciones indígenas ancestrales con influencias coloniales y afrodescendientes, expresando historias, creencias y festividades propias de las comunidades andinas.</p>
+    <ul>
+        <h2>1.Huaylas</h2>
+        <li>Danza alegre y con mucho zapateo.</li>
+        <li>Muy popular en festividades andinas.</li>
+        <li>Representa la fuerza y alegría del pueblo.</li>
+        <br>
+        <h2>2.Wititi</h2>
+        <li>Danza del Colca que representa el cortejo.</li>
+        <li>Movimientos delicados entre parejas.</li>
+        <li>Tradicional y llena de simbolismo.</li>
+        <br>
+        <h2>3.Diablada</h2>
+        <li>Danza ceremonial con trajes y máscaras.</li>
+        <li>Representa la lucha entre el bien y el mal.</li>
+        <li>Muy ligada a festividades religiosas.</li>
+        <br>
+        <h2>4.Carnaval Ayacuchano</h2>
+        <li>Fiesta festiva y llena de color.</li>
+        <li>Incluye música, danza y tradiciones.</li>
+        <li>Celebración de identidad regional.</li>
+        <br>
+        <h2>5.Qhapaq Qolla</h2>
+        <li>Danza cusqueña del Inti Raymi.</li>
+        <li>Representa la llegada de los pueblos Qolla.</li>
+        <li>Parte importante de la cultura cusqueña.</li>
+        <br>
+        <h2>6.Qhapaq Negro</h2>
+        <li>Relacionada con la devoción religiosa en Cusco.</li>
+        <li>Fusiona elementos afroandinos y andinos.</li>
+        <li>Danza solemne y ritual.</li>
+        <br>
+        <h2>7.Tusuq Laykas</h2>
+        <li>Danza ritual para espantar malos espíritus.</li>
+        <li>Incluye cantos y movimientos simbólicos.</li>
+        <li>Práctica ancestral con fuerte significado.</li>
+        <br>
+        <h2>8.Santiago</h2>
+        <li>Danza agrícola de agradecimiento a la tierra.</li>
+        <li>Bailada en festividades de la Pachamama.</li>
+        <li>Expresa gratitud y respeto al medio ambiente.</li>
+        <br>
+        <h2>9.Pallas</h2>
+        <li>Danza ceremonial de mujeres.</li>
+        <li>Participan en fiestas religiosas.</li>
+        <li>Vestimentas elegantes y tradición.</li>
+        <br>
+        <h2>10.Negrería de Huánuco</h2>
+        <li>Danza que mezcla lo afro y lo andino.</li>
+        <li>Representa la diversidad cultural.</li>
+        <li>Expresa identidad y mestizaje.</li>
+    </ul>
+
+    <div class="slideshow">
+        <img id="imagen" src="" alt="Danza típica de la costa peruana">
+    </div>
+
+    <script>
+        // Lista de rutas a las imágenes
+        const imagenes = [
+            "sierra/danza1.jpg",
+           "sierra/danza2.jpg",
+           "sierra/danza3.jpg",
+           "sierra/danza4.jpg",
+           "sierra/danza5.jpg",
+           "sierra/danza6.jpg",
+           "sierra/danza7.jpg",
+           "sierra/danza8.jpg",
+           "sierra/danza9.jpg",
+           "sierra/danza10.jpg"
+
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        // Iniciar slideshow
+        mostrarSiguienteFoto();
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+
+    <footer>
+        @Dante Rodriguez tralalero tralala
+    </footer>
+
+</body>
+</html>

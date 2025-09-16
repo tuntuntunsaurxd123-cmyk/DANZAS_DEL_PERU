@@ -1,0 +1,206 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdf6e3, #f5e0c3);
+    color: #4a2c2a;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #bb6b45; /* Terracota cálido */
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(187, 107, 69, 0.4);
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+    font-weight: 600;
+    color: #f7ede2;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+header ul li {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #f7ede2; /* Fijamos el color aquí */
+}
+
+header ul li:hover {
+    color: #f7ede2 !important; /* Cambiamos para que no cambie el color */
+}
+
+header ul li q {
+    font-style: normal;
+    color: #f9c78a;
+}
+
+/* Submenu */
+header ul li ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #bb6b45;
+    padding: 12px 25px;
+    border-radius: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 8px 16px rgba(187, 107, 69, 0.4);
+    z-index: 1000;
+    min-width: 140px;
+}
+
+header ul li:hover ul {
+    display: flex;
+}
+
+header ul li ul li {
+    padding: 6px 0;
+    font-weight: 500;
+    color: #f7ede2;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* QUITAMOS el guion a estos ítems */
+header ul li ul li::before {
+    content: none;
+}
+
+header ul li ul li:hover {
+    color: #f7ede2 !important;
+}
+
+/* Aseguramos que los enlaces en el menú también mantengan el color */
+header ul li a {
+    color: #f7ede2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover,
+header ul li a:visited,
+header ul li a:focus,
+header ul li a:active {
+    color: #f7ede2 !important;
+    text-decoration: none;
+}
+
+/* Main */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 35px;
+    color: #bb6b45;
+    text-shadow: 1px 1px 5px rgba(255, 184, 95, 0.5);
+}
+
+/* Imagen central */
+main div img {
+    display: block;
+    margin: 0 auto 30px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(187, 107, 69, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+main div img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 15px 35px rgba(187, 107, 69, 0.5);
+}
+
+ul {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #bb6b45;
+    text-shadow: 0 1px 3px rgba(255, 184, 95, 0.6);
+    border-bottom: 3px solid #ffb85f;
+    padding-bottom: 6px;
+}
+
+/* Lista con guion decorativo (para el contenido principal) */
+li {
+    margin: 10px 0;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 22px;
+    color: #4a2c2a; /* Marrón oscuro */
+}
+
+li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    color: #bb6b45;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 15px;
+    background: #bb6b45;
+    color: #f7ede2;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 -5px 15px rgba(187, 107, 69, 0.5);
+    margin-top: 50px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    header ul {
+        gap: 25px;
+        font-size: 1rem;
+    }
+}

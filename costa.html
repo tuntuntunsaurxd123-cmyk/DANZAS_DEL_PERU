@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danzas Típicas del Perú - Costa</title>
+    <link rel="stylesheet" href="costa.css">
+</head>
+<body>
+
+    <h1>Danzas Típicas del Perú - Región Costa</h1>
+    <p>Las danzas típicas de la región Costa del Perú reflejan la riqueza cultural, histórica y mestiza de esta zona. Estas danzas combinan influencias indígenas, españolas y africanas, producto del mestizaje que caracteriza a la costa peruana desde la época colonial.</p>
+    <ul>
+        <h2>1.Marinera</h2>
+        <li>Danza nacional del Perú y la más representativa de la costa peruana.</li>
+        <li>Elegante y romántica, representa el coqueteo y galanteo entre una pareja.</li>
+        <li>Se baila con pañuelos y zapateo.</li>
+        <li>Existen varias versiones: norteña, limeña y serrana.</li>
+        <br>
+        <h2>2.Festejo</h2>
+        <li>De origen afroperuano, es una danza muy rítmica y alegre.</li>
+        <li>Expresa la fuerza y resistencia del pueblo afrodescendiente.</li>
+        <li>Caracterizada por el movimiento de caderas y percusión intensa (cajón, congas).</li>
+        <br>
+        <h2>3.Alcatraz</h2>
+        <li>Danza afroperuana.</li>
+        <li>Se baila con un papel atado a la espalda de la pareja que se intenta quemar con una vela, sin usar las manos.</li>
+        <li>Muy popular en fiestas y celebraciones costeras.</li>
+        <br>
+        <h2>4.Zamacueca</h2>
+        <li>Antecesora de la marinera.  </li>
+        <li>Danza mestiza con pasos similares al flamenco, pero con sabor costeño.</li>
+        <li>Muy popular en el siglo XIX.</li>
+        <br>
+        <h2>5.Lando</h2>
+        <li>Danza afroperuana con ritmo más pausado y sensual.</li>
+        <li>Presenta movimientos suaves y marcados, con contenido emocional profundo.</li>
+        <li>Se ha revitalizado en las últimas décadas.</li>
+        <br>
+        <h2>6.Tondero</h2>
+        <li>Danza típica de la zona norte del Perú, especialmente Piura.</li>
+        <li>Tiene raíces criollas, indígenas y africanas.</li>
+        <li>Muy expresiva, con mucho zapateo y movimientos de cadera.</li>
+        <br>
+        <h2>7.Son de los Diablos</h2>
+        <li>Danza afroperuana que se baila en grupo con máscaras de diablos.</li>
+        <li>Asociada a fiestas religiosas como el Corpus Christi.</li>
+        <li>Representa la lucha entre el bien y el mal.</li>
+        <br>
+        <h2>8.Hatajo de Negritos</h2>
+        <li>Danza navideña afroperuana.</li>
+        <li>Combina canto, zapateo y violín.</li>
+        <li>Expresa devoción y alegría por la Navidad.</li>
+        <br>
+        <h2>9.Cumanana</h2>
+        <li>Canto y danza de origen afroperuano con contenido satírico y crítico.</li>
+        <li>Se acompaña con guitarra y cajón.</li>
+        <li>Se caracteriza por la improvisación.</li>
+        <br>
+        <h2>10.Panalivio</h2>
+        <li>Danza afroperuana con ritmo lento y profundo.</li>
+        <li>Letras que expresan dolor, lucha o reflexión.</li>
+        <li>Tiene raíces africanas y se distingue por su emotividad.</li>
+    </ul>
+
+    <div class="slideshow">
+        <img id="imagen" src="" alt="Danza típica de la costa peruana">
+    </div>
+
+    <script>
+        // Lista de rutas a las imágenes
+        const imagenes = [
+            "costa/danza1.jpg",
+            "costa/danza2.jpg",
+            "costa/danza3.jpg",
+            "costa/danza4.jpg",
+            "costa/danza5.jpg",
+            "costa/danza6.jpg",
+            "costa/danza7.jpg",
+            "costa/danza8.jpg",
+            "costa/danza9.jpg",
+            "costa/danza10.jpg"
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        // Iniciar slideshow
+        mostrarSiguienteFoto();
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+
+    <footer>
+        @Dante Rodriguez tralalero tralala
+    </footer>
+
+</body>
+</html>

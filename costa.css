@@ -1,0 +1,139 @@
+/* costa.css */
+
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a7d8de, #e6f0f3); /* Azul agua suave y celeste */
+  color: #003d4c; /* Azul oscuro marino */
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  line-height: 1.65;
+  user-select: none;
+}
+
+/* Encabezado principal */
+h1 {
+  font-size: 3rem;
+  color: #007ea7; /* Azul turquesa vibrante */
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Párrafo introductorio */
+p {
+  font-size: 1.2rem;
+  max-width: 850px;
+  margin: 0 auto 40px auto;
+  text-align: justify;
+  color: #004d61; /* Azul marino */
+  letter-spacing: 0.025em;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Listas de danzas */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Los títulos de cada danza */
+ul > h2 {
+  color: #0096c7; /* Azul celeste vibrante */
+  font-size: 1.8rem;
+  margin: 40px 0 12px 5px;
+  border-left: 5px solid #00b4d8; /* Azul brillante */
+  padding-left: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-shadow: 0 0 2px rgba(0,0,0,0.08);
+}
+
+/* Items de la lista */
+li {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #023e58; /* Azul oscuro */
+  padding-left: 20px;
+  position: relative;
+  font-weight: 400;
+}
+
+/* Añadir un pequeño icono tipo "check" antes de cada li */
+li::before {
+  content: "✔";
+  color: #00b4d8; /* Azul brillante */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+/* Espaciado extra entre grupos */
+br {
+  display: block;
+  margin-bottom: 30px;
+}
+
+/* Slideshow container */
+.slideshow {
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+}
+
+/* Imagen del slideshow */
+.slideshow img {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(0, 128, 153, 0.25); /* sombra azulada */
+  transition: opacity 0.8s ease-in-out;
+  user-select: none;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 50px;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #007ea7; /* Azul turquesa */
+  border-top: 2px solid #00b4d8; /* Azul brillante */
+  font-weight: 500;
+  background: #d0f0fd; /* azul muy claro */
+  border-radius: 0 0 15px 15px;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  body {
+    padding: 15px 12px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  ul > h2 {
+    font-size: 1.4rem;
+    margin: 30px 0 10px 5px;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+}
